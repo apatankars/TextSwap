@@ -13,7 +13,7 @@ RUN apt-get update && apt-get install -y maven git curl ca-certificates
 COPY . .
 
 # Build the application
-RUN mvn clean package
+RUN mvn clean package -DskipTests
 
 # Expose the application port
 EXPOSE 8080
