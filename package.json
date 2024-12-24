@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "components": "^0.1.0",
+    "i": "^0.3.7",
+    "react-icons": "^5.4.0",
+    "react-router-dom": "^7.0.1"
+  }
+}
