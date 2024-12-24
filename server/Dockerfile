@@ -12,6 +12,8 @@ RUN apt-get update && apt-get install -y maven git curl ca-certificates
 # Copy your project files
 COPY . .
 
+ENV FIREBASE_CONFIG_BASE64 ${FIREBASE_CONFIG_BASE64}
+
 # Build the application
 RUN mvn clean package -DskipTests
 

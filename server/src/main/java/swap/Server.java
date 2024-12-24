@@ -15,7 +15,12 @@ import handlers.OffersUpdateHandler;
 import handlers.TestingResetHandler;
 import handlers.TransactionsHandler;
 import handlers.UserUpdateHandler;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.Base64;
 import spark.Filter;
 import spark.Spark;
 import storage.FirebaseUtilities;
@@ -38,6 +43,29 @@ public class Server {
 
     StorageInterface firebaseUtils;
     try {
+      // Decode the FIREBASE_CONFIG_BASE64 environment variable
+      String base64Config = System.getenv("FIREBASE_CONFIG_BASE64");
+      if (base64Config != null) {
+        // Determine the expected file path
+        String workingDirectory = System.getProperty("user.dir");
+        Path firebaseConfigPath =
+            Paths.get(workingDirectory, "src", "main", "resources", "firebase_config.json");
+
+        // Ensure the directories exist
+        Files.createDirectories(firebaseConfigPath.getParent());
+
+        // Write the decoded file to the expected path
+        try (FileOutputStream fos = new FileOutputStream(firebaseConfigPath.toString())) {
+          byte[] decodedBytes = Base64.getDecoder().decode(base64Config);
+          fos.write(decodedBytes);
+          System.out.println(
+              "Decoded firebase_config.json created at: " + firebaseConfigPath.toString());
+        }
+      } else {
+        System.err.println("Environment variable FIREBASE_CONFIG_BASE64 is not set.");
+        System.exit(1); // Exit if the configuration is missing
+      }
+
       firebaseUtils = new FirebaseUtilities(test_mode);
 
       Spark.get("buynow", new AddBuynowHandler(firebaseUtils));
