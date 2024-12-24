@@ -7,6 +7,8 @@ FROM openjdk:17-jdk-slim
 # Set the working directory inside the container
 WORKDIR /app
 
+RUN apt-get update && apt-get install -y git curl
+
 # Copy your Maven project to the container
 COPY . .
 
@@ -14,7 +16,7 @@ COPY . .
 RUN chmod +x ./mvnw
 
 # Build the application using Maven Wrapper
-RUN ./mvnw package
+RUN ./mvnw -X clean package
 
 # Expose the application port
 EXPOSE 8080
