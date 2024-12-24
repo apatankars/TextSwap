@@ -10,11 +10,14 @@ WORKDIR /app
 # Copy your Maven project to the container
 COPY . .
 
-# Build the application using Maven
-RUN ./mvn package
+# Add permissions for the Maven Wrapper
+RUN chmod +x ./mvnw
+
+# Build the application using Maven Wrapper
+RUN ./mvnw package
 
 # Expose the application port
 EXPOSE 8080
 
 # Command to run the application
-CMD ["java", "-jar", "target/<your-jar-file>.jar"]
+CMD ["java", "-jar", "target/s0-1.0-SNAPSHOT.jar"]
