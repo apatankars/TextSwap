@@ -1,18 +1,17 @@
-package edu.brown.cs.student.main.server.handlers;
+package handlers;
 
-import edu.brown.cs.student.main.server.storage.StorageInterface;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import spark.Request;
 import spark.Response;
 import spark.Route;
+import storage.StorageInterface;
 
-public class OffersIncomingHandler implements Route {
+public class GetUserPublic implements Route {
 
   public StorageInterface storageHandler;
 
-  public OffersIncomingHandler(StorageInterface storageHandler) {
+  public GetUserPublic(StorageInterface storageHandler) {
     this.storageHandler = storageHandler;
   }
 
@@ -34,23 +33,27 @@ public class OffersIncomingHandler implements Route {
         responseMap.put("response_type", "missing_parameter");
         responseMap.put("error", "user_id must be set");
       } else {
-        List<Map<String, Object>> user_offers =
-            this.storageHandler.getDocuments(
-                "offers",
-                -1,
-                -1,
-                (q) -> {
-                  q = q.whereEqualTo("seller_id", user_id);
-                  q = q.whereNotEqualTo("status", -1);
-                  return q;
-                });
 
-        responseMap.put("incoming_offers", user_offers);
-        responseMap.put("response_type", "success");
+        Map<String, Object> user = this.storageHandler.getDocumentByID("users", user_id);
+
+        if (user == null) {
+          responseMap.put("response_type", "error");
+          responseMap.put("error", "user not found");
+        } else {
+          responseMap.put("response_type", "success");
+          Map<String, Object> publicUser = new HashMap<>();
+          publicUser.put("user_id", user_id);
+          publicUser.put("username", user.get("username"));
+          publicUser.put("first_name", user.get("first_name"));
+          publicUser.put("last_name", user.get("last_name"));
+          publicUser.put("email", user.get("email"));
+          publicUser.put("uni_level", user.get("uni_level"));
+          publicUser.put("rating", user.get("rating"));
+          responseMap.put("public_user", publicUser);
+        }
       }
     } catch (Exception e) {
-      e.printStackTrace();
-      responseMap.put("response_type", "failure");
+      responseMap.put("response_type", "error");
       responseMap.put("error", e.getMessage());
     }
     return Utils.toMoshiJson(responseMap);

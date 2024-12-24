@@ -1,14 +1,14 @@
-package edu.brown.cs.student.main.server.handlers;
+package handlers;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import edu.brown.cs.student.main.server.storage.StorageInterface;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import spark.Request;
 import spark.Response;
 import spark.Route;
+import storage.StorageInterface;
 
 public class UserUpdateHandler implements Route {
 

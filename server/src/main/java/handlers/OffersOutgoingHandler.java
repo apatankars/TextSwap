@@ -1,18 +1,18 @@
-package edu.brown.cs.student.main.server.handlers;
+package handlers;
 
-import edu.brown.cs.student.main.server.storage.StorageInterface;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import spark.Request;
 import spark.Response;
 import spark.Route;
+import storage.StorageInterface;
 
-public class TransactionsHandler implements Route {
+public class OffersOutgoingHandler implements Route {
 
   public StorageInterface storageHandler;
 
-  public TransactionsHandler(StorageInterface storageHandler) {
+  public OffersOutgoingHandler(StorageInterface storageHandler) {
     this.storageHandler = storageHandler;
   }
 
@@ -26,9 +26,9 @@ public class TransactionsHandler implements Route {
         responseMap.put("response_type", "missing_parameter");
         responseMap.put("error", "user_id must be set");
       } else {
-        List<Map<String, Object>> user_transactions =
+        List<Map<String, Object>> user_offers =
             this.storageHandler.getDocuments(
-                "transactions",
+                "offers",
                 -1,
                 -1,
                 (q) -> {
@@ -36,7 +36,7 @@ public class TransactionsHandler implements Route {
                   return q;
                 });
 
-        responseMap.put("user_transactions", user_transactions);
+        responseMap.put("outgoing_offers", user_offers);
         responseMap.put("response_type", "success");
       }
     } catch (Exception e) {

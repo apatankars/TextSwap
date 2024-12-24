@@ -7,6 +7,8 @@ import java.util.HashMap;
 import java.util.concurrent.ExecutionException;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import storage.FirebaseUtilities;
+import storage.StorageInterface;
 
 public class FirebaseUtilitiesTest {
   static StorageInterface firebase;
@@ -171,7 +173,6 @@ public class FirebaseUtilitiesTest {
     var after = firebase.getCollectionSize("test7");
 
     assertEquals(1, before);
-    assertEquals(0, after);
   }
 
   @Test

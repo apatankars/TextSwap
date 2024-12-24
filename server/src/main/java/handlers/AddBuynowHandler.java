@@ -1,12 +1,12 @@
-package edu.brown.cs.student.main.server.handlers;
+package handlers;
 
-import edu.brown.cs.student.main.server.storage.StorageInterface;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import spark.Request;
 import spark.Response;
 import spark.Route;
+import storage.StorageInterface;
 
 public class AddBuynowHandler implements Route {
 

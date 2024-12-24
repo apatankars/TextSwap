@@ -1,4 +1,4 @@
-package edu.brown.cs.student.main.server.storage;
+package storage;
 
 import com.google.cloud.firestore.Query;
 

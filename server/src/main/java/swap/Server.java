@@ -1,31 +1,31 @@
-package edu.brown.cs.student.main.server;
+package swap;
 
 import static spark.Spark.after;
 
-import edu.brown.cs.student.main.server.handlers.AddBuynowHandler;
-import edu.brown.cs.student.main.server.handlers.AddOfferHandler;
-import edu.brown.cs.student.main.server.handlers.AddTextbookHandler;
-import edu.brown.cs.student.main.server.handlers.FetchUserHandler;
-import edu.brown.cs.student.main.server.handlers.GetTextbooksHandler;
-import edu.brown.cs.student.main.server.handlers.GetUserPublic;
-import edu.brown.cs.student.main.server.handlers.OffersIncomingHandler;
-import edu.brown.cs.student.main.server.handlers.OffersListingHandler;
-import edu.brown.cs.student.main.server.handlers.OffersOutgoingHandler;
-import edu.brown.cs.student.main.server.handlers.OffersUpdateHandler;
-import edu.brown.cs.student.main.server.handlers.TestingResetHandler;
-import edu.brown.cs.student.main.server.handlers.TransactionsHandler;
-import edu.brown.cs.student.main.server.handlers.UserUpdateHandler;
-import edu.brown.cs.student.main.server.storage.FirebaseUtilities;
-import edu.brown.cs.student.main.server.storage.StorageInterface;
+import handlers.AddBuynowHandler;
+import handlers.AddOfferHandler;
+import handlers.AddTextbookHandler;
+import handlers.FetchUserHandler;
+import handlers.GetTextbooksHandler;
+import handlers.GetUserPublic;
+import handlers.OffersIncomingHandler;
+import handlers.OffersListingHandler;
+import handlers.OffersOutgoingHandler;
+import handlers.OffersUpdateHandler;
+import handlers.TestingResetHandler;
+import handlers.TransactionsHandler;
+import handlers.UserUpdateHandler;
 import java.io.IOException;
 import spark.Filter;
 import spark.Spark;
+import storage.FirebaseUtilities;
+import storage.StorageInterface;
 
 /** Top Level class for our project, utilizes spark to create and maintain our server. */
 public class Server {
 
   public static void setUpServer(boolean test_mode) {
-    int port = 3232;
+    int port = Integer.parseInt(System.getenv().getOrDefault("PORT", "3232"));
     Spark.port(port);
 
     after(

@@ -1,4 +1,4 @@
-package edu.brown.cs.student.main.server.textbooks;
+package textbooks;
 
 public record Textbook(
     String user_id,
