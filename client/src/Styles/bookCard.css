@@ -1,0 +1,121 @@
+:root {
+  --colors-white: rgba(255, 255, 255, 1);
+  --colors-grey: rgba(235, 234, 237, 1);
+  --Colors-Text: rgba(21, 20, 57, 0.4);
+  --Colors-Heading: #1e0e62;
+  --colors-subHeading: #4f378a;
+  --colors-secondaryText: rgba(21, 20, 57, 0.6);
+  --colors-price: #350f9d;
+  --colors-originalPrice: rgba(21, 20, 57, 0.3);
+}
+
+.book-card {
+  background-color: var(--colors-white);
+  border: 1px solid var(--colors-grey);
+  border-radius: 12px;
+  width: 100%;
+  height: 90%;
+  max-width: 95%;
+  display: flex;
+  flex-direction: row;
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.book-image-container {
+  width: fit-content;
+  min-width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.book-cover-image {
+  max-width: fit-content;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  height: 100%;
+}
+
+.book-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-left: 15px;
+  width: 95%;
+}
+
+.book-course-code {
+  color: var(--Colors-Text);
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  text-align: right;
+}
+
+.book-title {
+  color: var(--Colors-Heading);
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.book-seller {
+  color: var(--colors-secondaryText);
+  font-size: 14px;
+  margin-bottom: 10px;
+  text-align: right;
+}
+
+.book-condition {
+  color: var(--colors-subHeading);
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  text-align: right;
+}
+
+.button-price-container {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.view-details-button {
+  background-color: var(--colors-subHeading);
+  color: var(--colors-white);
+  border: none;
+  border-radius: 8px;
+  padding: 10px 15px;
+  font-size: 9px;
+  font-weight: 700;
+  width: fit-content;
+  cursor: pointer;
+  position: relative;
+  top: 8px;
+  margin-left: 10px;
+}
+
+.details-button:hover {
+  background-color: #350f9d;
+}
+
+.book-price {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--colors-price);
+}
+
+.book-original-price {
+  text-decoration: line-through;
+  font-size: 24px;
+  color: var(--colors-originalPrice);
+}

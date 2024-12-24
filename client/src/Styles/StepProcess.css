@@ -1,0 +1,130 @@
+.steps-container {
+  background-color: #2f1893; /* A nice dark purple background */
+  color: #ffffff;
+  padding: 40px;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* width: 100%; */
+}
+
+.steps-title {
+  font-family: "DM Sans";
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 52px; /* 123.81% */
+  letter-spacing: -0.4px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.steps-subtitle {
+  text-align: center;
+  /* Heading / H5 Lead */
+  font-family: "DM Sans";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px; /* 145.455% */
+}
+
+.step-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  position: relative;
+  background: #ffffff;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 18px;
+  padding: 20px;
+  width: 70%;
+}
+
+.step-number {
+  font-weight: bold;
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  font-size: 42px;
+  letter-spacing: -0.4px;
+  line-height: 52px;
+  display: inline-block;
+  font-family: "DM Sans";
+  color: #482be7;
+  text-align: left;
+}
+
+.step-content {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.step-icon {
+  margin-right: 15px;
+  width: 40px;
+  height: 40px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  /* This is a placeholder; add your icon here or remove this style */
+}
+
+.step-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 1%;
+  margin-left: 3%;
+}
+
+.step-heading {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+}
+
+.step-description {
+  margin: 5px 0 0 0;
+  font-size: 14px;
+  line-height: 1.4;
+  color: black;
+  font-size: 18px;
+  font-weight: 100;
+  font-family: "DM Sans";
+  color: rgba(21, 20, 57, 0.4);
+  text-align: left;
+  opacity: 0.7;
+  mix-blend-mode: normal;
+}
+
+.step-arrow {
+  text-align: center;
+  font-size: 24px;
+  margin: 20px 0;
+  font-weight: bold;
+}
+
+.box {
+  height: 100px;
+  width: 100px;
+}
+
+.box .ellipse {
+  background-color: #c7c0f1;
+  border-radius: 55.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  left: 0;
+  top: 0;
+  width: 100px;
+}

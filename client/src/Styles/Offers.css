@@ -1,0 +1,216 @@
+.offer-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dashboard-menu-container {
+  width: 100%;
+}
+
+.offer-text {
+  color: #4f378a;
+  font-family: "DM Sans";
+  font-size: 48px;
+  text-align: center;
+  font-style: normal;
+  margin-top: 50px;
+  font-weight: 700;
+  line-height: 26px; /* 54.167% */
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.action-block-container {
+  width: 80%;
+  height: fit-content;
+  padding: 1%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.action-container-flex {
+  display: flex;
+  justify-content: center;
+}
+
+.buying-block {
+  width: 310px;
+  height: 74px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  background: #362cb4;
+  border-color: transparent;
+}
+
+.selling-block {
+  width: 310px;
+  height: 74px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  background: #00c487;
+  border-color: transparent;
+}
+
+.action-text {
+  width: 120.378px;
+  white-space: nowrap;
+  height: 36px;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 80px;
+  flex-shrink: 0;
+  color: #fff;
+  font-family: "DM Sans";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 26px; /* 108.333% */
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.time-container {
+  display: flex;
+  width: fit-content;
+  height: 66px;
+  display: flex;
+  padding: 8px 12px;
+  align-items: center;
+  gap: 8px;
+  border-radius: 12px;
+  margin-top: 20px;
+  background: rgba(217, 216, 216, 0.61);
+}
+
+.time-block {
+  width: 305px;
+  height: 50px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.time-text {
+  width: 91px;
+  color: #000;
+  font-family: "DM Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 26px; /* 130% */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.book-container {
+  width: 1112px;
+  height: 1100px;
+  flex-shrink: 0;
+
+  margin-top: 50px;
+  margin-left: 120px;
+
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.buying-button {
+  display: flex;
+  align-items: center;
+  background-color: #362cb4; /* Button background color */
+  border: none;
+  border-radius: 12px;
+  padding: 10px 20px;
+  color: white;
+  margin-right: 10px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  border-color: transparent;
+}
+
+.buying-text {
+  margin-right: 10px;
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  background-color: #918aff; /* Badge background color */
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  justify-content: center;
+  position: relative;
+}
+
+.selling-button {
+  display: flex;
+  align-items: center;
+  background-color: #00c487; /* Green background for "Selling" */
+  border: none;
+  border-radius: 12px;
+  padding: 10px 20px;
+  color: white;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  border-color: transparent;
+}
+
+.selling-text {
+  margin-right: 10px;
+}
+
+.sellBadge {
+  display: flex;
+  align-items: center;
+  background-color: #c8facc; /* Light green for badge */
+  color: #2e7d32; /* Dark green for text */
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  justify-content: center;
+  position: relative;
+}
+
+.buying-button:not(.active),
+.selling-button:not(.active) {
+  opacity: 0.5;
+}
+
+.time-block:not(.active) {
+  opacity: 0.5;
+}
+
+.buying-button,
+.selling-button,
+.time-block {
+  transition: opacity 0.3s ease, border 0.3s ease;
+}

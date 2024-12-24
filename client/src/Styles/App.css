@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&display=swap");
+
+:root {
+  --Background-Dark: #2f1893;
+  --Action-Secondary: #482be7;
+  --Text-Primary: #fff;
+  --Colors-Heading: #1e0e62;
+  --colorsheading: rgba(30, 14, 98, 1);
+  --colors-text: rgba(21, 20, 57, 0.4);
+  --Colors-White: #fff;
+}
+
+.App {
+  text-align: center;
+  background-color: #282c34;
+  font-family: "DM Sans";
+  overflow-x: hidden;
+}
+
+.nav-menu-container {
+  align-items: center;
+  min-height: 10vh;
+  width: 100%;
+
+  display: flex;
+  background: var(--Background-Dark, #2f1893);
+  color: var(--Text-Primary, #fff);
+  flex-direction: row;
+}
+
+.nav-book-icon {
+  width: 3vw; /* 4% of the viewport width */
+  margin-left: 3.5vw; /* 3.5% of the viewport width as the left margin */
+}
+
+.logo-button {
+  background: var(--Background-Dark, #2f1893);
+  border-color: transparent;
+}
+
+.logo-text {
+  /* text-align: center; */
+  /* align-content: center; */
+  color: var(--Text-Primary, #fff);
+  font-size: 40px;
+  font-family: "DM Sans";
+  font-weight: 700;
+}
+
+.nav-link {
+  color: var(--Text-Primary, #fff);
+  margin: 15px;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.page-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  right: 4vw; /* 4% of the viewport width */
+}
+
+.home-container {
+  height: 100vh;
+}
+
+.landing-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  overflow-x: hidden;
+}
+
+.landing-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 40vw;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.landing-text {
+  color: var(--colorsheading, rgba(30, 14, 98, 1));
+  font-size: 70px;
+  font-family: "DM Sans";
+  letter-spacing: -1px;
+}
+
+.landing-blurb {
+  color: var(--Colors-Text, rgba(21, 20, 57, 0.4));
+  font-size: 22px;
+}
+.get-started-button {
+  border-radius: 100px;
+  background: var(--Action-Secondary, #482be7);
+  cursor: pointer;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.get-started-button:hover {
+  background-color: #3c30d1; /* Slightly darker purple */
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.get-started-text {
+  display: flex;
+  align-items: center;
+  color: var(--Colors-White, #fff);
+  text-align: center;
+  font-family: "DM Sans";
+  font-size: 20px;
+}
+.shop-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

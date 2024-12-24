@@ -1,0 +1,306 @@
+:root {
+  --colors-white: rgba(255, 255, 255, 1);
+  --colors-grey: rgba(235, 234, 237, 1);
+  --Colors-Text: rgba(21, 20, 57, 0.4);
+  --Colors-Heading: #1e0e62;
+  --colors-subHeading: #4f378a;
+  --colors-secondaryText: rgba(21, 20, 57, 0.6);
+  --colors-price: #350f9d;
+  --colors-originalPrice: rgba(21, 20, 57, 0.3);
+}
+
+.offer-card {
+  background-color: var(--colors-white);
+  border: 1px solid var(--colors-grey);
+  border-radius: 12px;
+  width: 100%;
+  max-width: 965px;
+  height: 305px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: row;
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.offer-response-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 50%;
+  width: 100%;
+}
+
+.book-cover {
+  height: auto;
+  border-radius: 8px;
+}
+
+.book-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-left: 15px;
+  margin-right: 10px;
+  width: 95%;
+}
+
+.listing-course-code {
+  color: var(--Colors-Text);
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.listing-title {
+  color: var(--Colors-Heading);
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.listing-author {
+  color: var(--colors-secondaryText);
+  font-size: 16px;
+  letter-spacing: 2px;
+
+  margin-bottom: 10px;
+}
+
+.listing-condition {
+  color: var(--colors-subHeading);
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.price-container {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: auto;
+}
+
+.details-button {
+  background-color: var(--colors-subHeading);
+  color: var(--colors-white);
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-right: 30px;
+}
+
+.details-button:hover {
+  background-color: #350f9d;
+}
+
+.listing-book-selling-price {
+  font-size: 34px;
+  font-weight: 700;
+  color: var(--colors-price);
+  margin-bottom: 5px;
+  text-align: left;
+  text-transform: uppercase;
+  font-family: "DM Sans";
+}
+
+.listing-book-price {
+  margin-top: 5px;
+  font-size: 24px;
+  color: var(--colors-originalPrice);
+  text-align: left;
+  text-transform: uppercase;
+  font-family: "DM Sans";
+}
+
+.user-details {
+  width: 100%;
+}
+
+.card-details {
+  justify-content: flex-end;
+  display: flex;
+  width: 100%;
+}
+
+.offer-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 15px;
+  width: 100%;
+}
+
+.user-info-container {
+  display: flex;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-left: 5px;
+}
+
+.user-text {
+  width: 152px;
+  height: 23px;
+  flex-shrink: 0;
+  color: var(--Schemes-On-Primary-Container, #4f378a);
+  font-family: "DM Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 26px; /* 130% */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.user-rating-container {
+  display: flex;
+  align-items: center;
+}
+
+.offer-text-container {
+  display: flex;
+  align-items: center;
+}
+
+.offer-price-text {
+  color: var(--Colors-Heading, #1e0e62);
+
+  /* Heading / H5 Lead */
+  font-family: "DM Sans";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px; /* 145.455% */
+  margin-right: 10px;
+}
+
+.offer-price-number-text {
+  color: var(--Colors-Heading, #1e0e62);
+
+  /* Heading / H3 Title */
+  font-family: "DM Sans";
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 52px;
+  letter-spacing: -0.4px;
+}
+
+.divider {
+  width: 1px;
+  height: 315px;
+  background: #000;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.decision-container {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.accept-block {
+  width: fit-content;
+  flex-shrink: 0;
+  /* margin-right: 6px; */
+  width: 50%;
+  margin-right: 5px;
+  border-radius: 15px;
+  background: #007c55;
+  align-content: center;
+}
+
+.cancel-block {
+  width: 50%;
+  height: 46px;
+  flex-shrink: 0;
+  border-radius: 15px;
+  background: #c41d00;
+}
+
+.decision-text {
+  width: 100%;
+  white-space: nowrap;
+  flex-shrink: 0;
+  color: #fff;
+  text-align: center;
+  font-family: "DM Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 26px; /* 162.5% */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.cards-container {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 25px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
+
+.listing-information-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 100%;
+  width: 60%;
+}
+
+.cancel-offer-button {
+  background: #c41d00;
+  border-radius: 15px;
+  width: fit-content;
+  padding: 10px 20px;
+  border-color: transparent;
+}
+
+.cancel-offer-button:hover {
+  background: #c30101;
+}
+
+.complete-purchase-button {
+  background: #00c487;
+  border-radius: 15px;
+  width: fit-content;
+  padding: 10px 20px;
+  border-color: transparent;
+}
+
+.complete-purchase-button:hover {
+  background: #01cf80;
+}
+
+.default-message-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  /* padding: 10px 20px; */
+  border-radius: 15px;
+  background: #b60b0b;
+}

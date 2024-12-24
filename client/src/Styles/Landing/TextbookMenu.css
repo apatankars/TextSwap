@@ -1,0 +1,35 @@
+.textbook-menu-container {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 15px 0px 5%;
+}
+
+.card-title-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  margin-top: 20px;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.view-all-button:hover {
+  color: rgb(28, 124, 92);
+}
+
+.textbook-grid-container {
+  display: flex;
+  flex-direction: row;
+  padding-left: 25px;
+  margin-top: 20px;
+  height: 50%;
+  width: 80%;
+}

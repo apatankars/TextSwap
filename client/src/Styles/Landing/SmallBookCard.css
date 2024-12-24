@@ -1,0 +1,103 @@
+:root {
+  --colors-white: rgba(255, 255, 255, 1);
+  --colors-grey: rgba(235, 234, 237, 1);
+  --Colors-Text: rgba(21, 20, 57, 0.4);
+  --Colors-Heading: #1e0e62;
+  --colors-subHeading: #4f378a;
+  --colors-secondaryText: rgba(21, 20, 57, 0.6);
+  --colors-price: #211346;
+  --colors-originalPrice: rgba(21, 20, 57, 0.3);
+}
+
+.big-book-card-container {
+  background-color: var(--colors-white);
+  border: 1px solid var(--colors-grey);
+  border-radius: 12px;
+  width: 100%;
+  /* height: 100%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.book-card-container {
+  background-color: var(--colors-white);
+  border: 1px solid var(--colors-grey);
+  border-radius: 12px;
+  width: 100%;
+  height: 100%;
+  min-height: fit-content;
+  display: flex;
+  flex-direction: row;
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.book-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-left: 15px;
+  width: 95%;
+}
+
+.book-course-code {
+  color: var(--Colors-Text);
+  font-size: 12px;
+  font-family: "DM Sans";
+  font-weight: 600;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.book-title {
+  color: var(--Colors-Heading);
+  font-size: 26px;
+  font-family: "DM Sans";
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.book-seller {
+  color: var(--colors-secondaryText);
+  font-size: 14px;
+  margin-bottom: 10px;
+  font-family: "DM Sans";
+  text-align: left;
+}
+
+.book-condition {
+  color: var(--colors-subHeading);
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  font-family: "DM Sans";
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.price-and-button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.price-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

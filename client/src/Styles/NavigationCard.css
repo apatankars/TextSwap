@@ -1,0 +1,30 @@
+.button-container {
+  background: transparent;
+  border-color: transparent;
+  min-height: 100%;
+  width: 100%;
+}
+
+.navigation-card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  min-width: 340px;
+  width: 100%;
+  min-height: 360px;
+}
+
+.title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0 0px 20px;
+  width: 90%;
+}
+
+.text-container {
+  width: 90%;
+  margin: 0 0px 20px 20px;
+}
