@@ -32,19 +32,19 @@ import storage.StorageInterface;
 public class Server {
 
   public static void setUpFirebaseConfig() {
-    String privateKey = System.getenv("FIREBASE_PRIVATE_KEY").replace("\\n", "\n");
+    String privateKey = System.getenv("private_key").replace("\\n", "\n");
 
     JSONObject firebaseConfig = new JSONObject();
-    firebaseConfig.put("type", System.getenv("FIREBASE_TYPE"));
-    firebaseConfig.put("project_id", System.getenv("FIREBASE_PROJECT_ID"));
-    firebaseConfig.put("private_key_id", System.getenv("FIREBASE_PRIVATE_KEY_ID"));
+    firebaseConfig.put("type", System.getenv("type"));
+    firebaseConfig.put("project_id", System.getenv("project_id"));
+    firebaseConfig.put("private_key_id", System.getenv("private_key_id"));
     firebaseConfig.put("private_key", privateKey);
-    firebaseConfig.put("client_email", System.getenv("FIREBASE_CLIENT_EMAIL"));
-    firebaseConfig.put("client_id", System.getenv("FIREBASE_CLIENT_ID"));
-    firebaseConfig.put("auth_uri", System.getenv("FIREBASE_AUTH_URI"));
-    firebaseConfig.put("token_uri", System.getenv("FIREBASE_TOKEN_URI"));
-    firebaseConfig.put("auth_provider_x509_cert_url", System.getenv("FIREBASE_AUTH_PROVIDER_X509_CERT_URL"));
-    firebaseConfig.put("client_x509_cert_url", System.getenv("FIREBASE_CLIENT_X509_CERT_URL"));
+    firebaseConfig.put("client_email", System.getenv("client_email"));
+    firebaseConfig.put("client_id", System.getenv("client_id"));
+    firebaseConfig.put("auth_uri", System.getenv("auth_uri"));
+    firebaseConfig.put("token_uri", System.getenv("token_uri"));
+    firebaseConfig.put("auth_provider_x509_cert_url", System.getenv("auth_provider_x509_cert_url"));
+    firebaseConfig.put("client_x509_cert_url", System.getenv("client_x509_cert_url"));
 
     String workingDirectory = System.getProperty("user.dir");
     Path firebaseConfigPath =
