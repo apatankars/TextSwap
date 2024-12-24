@@ -1,22 +1,19 @@
 FROM ubuntu:latest
 LABEL authors="armaanpatankar"
 
-# Use an official OpenJDK runtime as the base image
 FROM openjdk:17-jdk-slim
 
-# Set the working directory inside the container
+# Set working directory
 WORKDIR /app
 
-RUN apt-get update && apt-get install -y git curl
+# Install Maven and other dependencies
+RUN apt-get update && apt-get install -y maven git curl ca-certificates
 
-# Copy your Maven project to the container
+# Copy your project files
 COPY . .
 
-# Add permissions for the Maven Wrapper
-RUN chmod +x ./mvnw
-
-# Build the application using Maven Wrapper
-RUN ./mvnw -X clean package
+# Build the application
+RUN mvn clean package
 
 # Expose the application port
 EXPOSE 8080
